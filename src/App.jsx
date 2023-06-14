@@ -1,4 +1,5 @@
 import React from "react";
+import Fruit from "./compoent/Fruit";
 
 const App = () => {
   const onClickButton = () =>alert()
@@ -9,7 +10,13 @@ const App = () => {
   return (
     <>
       <h1 style={cssSample}>こんにちは</h1>
-      <p>スタイルの当て方について確認</p>
+      <Fruit color="orange">オレンジ</Fruit>
+      <Fruit color="purple">ブドウ</Fruit>
+      <Fruit color="yellow">レモン</Fruit>
+{/*
+      <p >オレンジ</p>
+      <p>ブドウ</p>
+      <p>レモン</p> */}
       <button onClick={onClickButton}>ボタン</button>
     </>
   )
