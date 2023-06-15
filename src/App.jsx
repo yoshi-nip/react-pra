@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import Fruit from "./compoent/Fruit";
+import React, { useEffect, useState } from "react";
+import  {Fruit} from "./compoent/Fruit";
 
-const App = () => {
+export const App = () => {
   const [num,setNum] = useState(0)
   const [onOff,setOnOff] = useState(true)
   const cssSample = {
@@ -14,13 +14,15 @@ const App = () => {
   const onOffButton = () =>{
       setOnOff(!onOff)
   }
-  if(num > 0){
-    if(num % 3 === 0){
-      onOff || setOnOff(true)
-    }else{
-      onOff && setOnOff(false)
+  useEffect(()=>{
+    if(num > 0){
+      if(num % 3 === 0){
+        onOff || setOnOff(true)
+      }else{
+        onOff && setOnOff(false)
+      }
     }
-  }
+  },[num]);
 
   return (
     <>
@@ -36,4 +38,4 @@ const App = () => {
   )
 };
 
-export default App;
+// export default App;

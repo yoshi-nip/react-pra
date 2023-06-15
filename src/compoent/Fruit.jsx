@@ -1,5 +1,5 @@
 import React from "react";
-const Fruit = (props)=>{
+export const Fruit = (props)=>{
   console.log(props)
   //分割代入
   const {color , children} = props
@@ -8,4 +8,4 @@ const Fruit = (props)=>{
     <p style={{color}}>{children}</p>
   )
 }
-export default Fruit
+// export default Fruit
